@@ -1,0 +1,47 @@
+$banner: #013266;
+$darkest: #013266;
+
+$midtone: #0098fe;
+$brightAccent: #0098fe;
+
+$card1: #FFA1E0;
+$card2: #da88d3;
+$card3: #A772B9;
+
+$medFontHeading: 2rem;
+$medFontPara: 1.5rem;
+$cardPadding: .3125rem;
+$border: .125rem;
+$largePadding: 1.25rem; 
+
+//-------------------------------------------------------------------------
+// Styling Cross-Browser Compatible Range Inputs with Sass
+// Github: https://github.com/darlanrod/input-range-sass
+// Author: Darlan Rod https://github.com/darlanrod
+// Version 1.5.2
+// MIT License
+
+$track-color: #eceff1 !default;
+$thumb-color: $midtone !default;
+
+$thumb-radius: $medFontHeading !default;
+$thumb-height: $medFontHeading!default;
+$thumb-width: $medFontHeading !default;
+$thumb-shadow-size: .25rem !default;
+$thumb-shadow-blur: .25rem !default;
+$thumb-shadow-color: rgba(0, 0, 0, .2) !default;
+$thumb-border-width: /* var(--border) */ .125rem !default;
+$thumb-border-color: #eceff1 !default;
+
+$track-width: 100% !default;
+$track-height: 1rem !default;
+$track-shadow-size: .0625rem !default;
+$track-shadow-blur: .0625rem !default;
+$track-shadow-color: rgba(0, 0, 0, .2) !default;
+$track-border-width: .125rem !default;
+$track-border-color: #cfd8dc !default;
+
+$track-radius: 1.25rem !default;
+$contrast: 5% !default;
+
+$ie-bottom-track-color: darken($track-color, $contrast) !default;

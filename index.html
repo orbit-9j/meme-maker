@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Meme Generator</title>
+        <link rel="stylesheet" href="./styles/meme-generator.css">
+        <link rel="icon" type="image/x-icon" href="favicon.png"> <!-- credits https://free-game-assets.itch.io/20-free-sci-fi-icons-pixel-art -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Orbit-9j's epic meme generator</h1>
+        </header>
+
+        <section>
+            <div id="canvas-container" class="container">
+                <p id="canvasText">Select an image to start memeing!</p>
+                    <canvas id="meme-canvas" title="Right click -> &quot;Save image as...&quot;"></canvas>
+                </div>
+
+            <div class ="maker-container container">
+                <h1 class="title">Upload your own image...</h1>
+                <div class="button-container">
+                    <label class="button" for="image-input">Upload Template</label>
+                    <input type="file" id="image-input" accept="image/*" class="button">
+                    <button id="download" class="button">Download meme</button>
+                </div>
+
+                <div class="inputs">
+                    <textarea id="top-text"></textarea>
+                    <div class="slider-container">
+                        <label for="top-text-size-input">Top text size:</label>
+                        <input type="range" 
+                    class="slider" id="top-text-size-input" min="0.05" max="0.25" value="0.15" step="0.01">
+                    </div>
+                    <textarea id="bottom-text"></textarea>
+                    <div class="slider-container">
+                        <label for="bottom-text-size-input">Bottom text size:</label>
+                        <input type="range" class="slider" id="bottom-text-size-input" min="0.05" max="0.25" value="0.15" step="0.01">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="preset-container container">
+                <h1 class="title">...Or select a preset</h1>
+                <div class = "images">
+                    <template>
+                        <img src="#" class="meme" onclick="presetMeme(this.getAttribute('src'))">
+                    </template>
+                </div>
+            </div>
+        </section>
+        
+        <!-- future ideas: -->
+        <!-- slider for text position -->
+        <!-- colour picker -->
+        <!-- font selector -->
+        <!-- change stylesheets button-->
+        <!-- swap card 2 and card 3 to allow more inputs in card 2 -->
+
+        <script src="meme-generator.js"></script>
+    </body>
+</html>
