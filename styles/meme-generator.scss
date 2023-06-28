@@ -226,7 +226,7 @@ section {
         [type="range"] {
           -webkit-appearance: none;
           background: transparent;
-          margin: $thumb-height / 2 0;
+          margin: calc($thumb-height / 2) 0;
           width: $track-width;
 
           &::-moz-focus-outer {
@@ -265,7 +265,8 @@ section {
             @include thumb;
             -webkit-appearance: none;
             margin-top: (
-              (-$track-border-width * 2 + $track-height) / 2 - $thumb-height / 2
+              calc((-1 * $track-border-width * 2 + $track-height) / 2) -
+                calc($thumb-height / 2)
             );
           }
 
@@ -279,7 +280,7 @@ section {
             background: $track-color;
             border: $track-border-width solid $track-border-color;
             border-radius: $track-radius;
-            height: $track-height / 2;
+            height: calc($track-height / 2);
           }
 
           &::-moz-range-thumb {
@@ -290,7 +291,7 @@ section {
             @include track;
             background: transparent;
             border-color: transparent;
-            border-width: ($thumb-height / 2) 0;
+            border-width: calc($thumb-height / 2) 0;
             color: transparent;
           }
 
@@ -318,7 +319,7 @@ section {
 
           &::-ms-thumb {
             @include thumb;
-            margin-top: $track-height / 4;
+            margin-top: calc($track-height / 4);
           }
 
           &:disabled {
