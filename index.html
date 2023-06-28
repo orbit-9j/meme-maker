@@ -5,21 +5,31 @@
         <title>Meme Generator</title>
         <link rel="stylesheet" href="./styles/meme-generator.css">
         <link rel="icon" type="image/x-icon" href="favicon.png"> <!-- credits https://free-game-assets.itch.io/20-free-sci-fi-icons-pixel-art -->
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
         <meta content="width=device-width, initial-scale=1" name="viewport" />
     </head>
     <body>
         <header>
+            <img src="nyancat - cropped.png"/>
             <h1>Orbit-9j's epic meme generator</h1>
+            <img src="nyancat - mirrored.png"/>
         </header>
 
         <section>
             <div id="canvas-container" class="container">
                 <p id="canvasText">Select an image to start memeing!</p>
+                <div class="canvas-wrapper">
                     <canvas id="meme-canvas" title="Right click -> &quot;Save image as...&quot;"></canvas>
                 </div>
+            </div>
 
             <div class ="maker-container container">
                 <h1 class="title">Upload your own image...</h1>
@@ -46,11 +56,14 @@
             
             <div class="preset-container container">
                 <h1 class="title">...Or select a preset</h1>
-                <div class = "images">
+                <div class="image-wrapper">
+                    <div class = "images">
                     <template>
                         <img src="#" class="meme" onclick="presetMeme(this.getAttribute('src'))">
                     </template>
                 </div>
+                </div>
+                
             </div>
         </section>
         
